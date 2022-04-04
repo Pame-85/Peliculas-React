@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import NewMovies from "./pages/NewMovies";
 import Popular from "./pages/Popular";
 import Search from "./pages/Search";
+import Movie from "./pages/Movie";
 
 //components
 import MenuTop from "./components/MenuTop";
@@ -28,6 +29,7 @@ function App() {
         <Route path="/new-movies" element={<NewMovies />} />
         <Route path="/popular" element={<Popular />} />
         <Route path="/search" element={<Search />} />
+        <Route path="/movie/:id" element={<Movie />} />
       </Routes>
       </Content>
       <Footer style={{zIndex: '1'}}/>
