@@ -1,4 +1,4 @@
-import "./Footer.sass";
+import "./_Footer.sass";
 import { Layout } from "antd";
 import {
   GithubOutlined,
