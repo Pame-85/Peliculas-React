@@ -1,5 +1,6 @@
 import React from "react";
 import { Layout } from "antd";
+import "./App.scss"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 //pages
@@ -13,6 +14,7 @@ import MenuTop from "./components/MenuTop";
 import Footer from "./components/Footer"
 
 
+
 function App() {
   const { Header, Content } = Layout;
   return (
@@ -22,7 +24,7 @@ function App() {
       </Header>
       <Content>
       <Routes>
-        <Route path="/proyecto-movies" element={<Home />} />
+        <Route path="/project-movies" element={<Home />} />
         <Route path="/new-movies" element={<NewMovies />} />
         <Route path="/popular" element={<Popular />} />
         <Route path="/search" element={<Search />} />

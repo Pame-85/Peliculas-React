@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Menu } from "antd";
 import logo from "../../assets/popcorn.png";
-import "./MenuTop.sass";
+import "./_MenuTop.sass";
 
 
 const MenuTop = () => {
@@ -14,16 +14,16 @@ const MenuTop = () => {
 
       <Menu mode="horizontal">
         <Menu.Item key="1">
-          <Link to="/proyecto-movies">Home</Link>
+          <Link to="/project-movies">Home</Link>
         </Menu.Item>
         <Menu.Item key="2">
-          <Link to="/new-movies">NewMovies</Link>
+          <Link to="/new-movies">Ultimos lanzamientos</Link>
         </Menu.Item>
         <Menu.Item key="3">
-          <Link to="/popular">Popular</Link>
+          <Link to="/popular">Populares</Link>
         </Menu.Item>
         <Menu.Item key="4">
-          <Link to="/search">Search</Link>
+          <Link to="/search">Buscar</Link>
         </Menu.Item>
       </Menu>
     </div>
