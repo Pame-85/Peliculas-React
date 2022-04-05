@@ -18,7 +18,7 @@ function App() {
   const { Header, Content } = Layout;
   return (
     <BrowserRouter>
-      <Header style={{ zIndex: "1" }}>
+      <Header style={{ zIndex: "1"}}>
         <MenuTop />
       </Header>
       <Content>

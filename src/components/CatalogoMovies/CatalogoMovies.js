@@ -8,58 +8,63 @@ import { Link } from "react-router-dom";
 const { Meta } = Card;
 
 const CatalogoMovies = ({ url }) => {
-    const [page, setPage] = useState(1);
-    const [movies, setMovies] = useState([]);
-    const [totalPages, setTotalPages] = useState(1);
-  
-    useEffect(() => {
-      const fetchMovies = async () => {
-        const urlWithPagination = `${url}&page=${page}`;
-        const response = await fetch(urlWithPagination);
-        const moviesObj = await response.json();
-        setTotalPages(moviesObj.total_pages);
-        setMovies(moviesObj.results);
-      };
-      fetchMovies();
-    }, [page, url]);
-  
-    const handlePageClick = (page) => {
-      setPage(page);
+  const [page, setPage] = useState(1);
+  const [movies, setMovies] = useState([]);
+  const [totalPages, setTotalPages] = useState(1);
+
+  useEffect(() => {
+    const fetchMovies = async () => {
+      const urlWithPagination = `${url}&page=${page}`;
+      const response = await fetch(urlWithPagination);
+      const moviesObj = await response.json();
+      setTotalPages(moviesObj.total_pages);
+      setMovies(moviesObj.results);
     };
-  
-    if (movies === undefined) {
-      return <Loading />;
-    }
-    return (
-      <section className="cards-section">
-        {movies.map((movie) => (
-          <MovieCard movie={movie} key={movie.id} />
-        ))}
-        <div className="pagination">
-          <Pagination
-            onChange={handlePageClick}
-            currentPage={page}
-            total={totalPages}
-            hideOnSinglePage={true}
-          />
-          <br />
-        </div>
-      </section>
-    );
+    fetchMovies();
+  }, [page, url]);
+
+  const handlePageClick = (page) => {
+    setPage(page);
   };
-  
-  const MovieCard = ({ movie: { id, title, poster_path } }) => (
-    <Link to={`/movie/${id}`}>
-      <Card
-        hoverable
-        style={{ width: 240 }}
-        className="card"
-        cover={<img alt="example" src={`https://image.tmdb.org/t/p/original${poster_path}`} />}
-        actions={[<PlayCircleOutlined className="__icon" key="plus" />]}
-      >
-        <Meta title={title} />
-      </Card>
-    </Link>
+
+  if (movies === undefined) {
+    return <Loading />;
+  }
+  return (
+    <section className="cards-section">
+      {movies.map((movie) => (
+        <MovieCard movie={movie} key={movie.id} />
+      ))}
+      <div className="pagination">
+        <Pagination
+          onChange={handlePageClick}
+          currentPage={page}
+          total={totalPages}
+          hideOnSinglePage={true}
+        />
+        <br />
+      </div>
+    </section>
   );
-  
-  export default CatalogoMovies;
+};
+
+const MovieCard = ({ movie: { id, title, poster_path } }) => (
+  <Link to={`/movie/${id}`}>
+    <Card
+      hoverable
+      style={{ width: 240 }}
+      className="card"
+      cover={
+        <img
+          alt="example"
+          src={`https://image.tmdb.org/t/p/original${poster_path}`}
+        />
+      }
+      actions={[<PlayCircleOutlined className="__icon" key="plus" />]}
+    >
+      <Meta title={title} style={{ textAlign: "center"}} />
+    </Card>
+  </Link>
+);
+
+export default CatalogoMovies;
