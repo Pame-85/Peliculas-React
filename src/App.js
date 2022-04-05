@@ -1,6 +1,6 @@
 import React from "react";
 import { Layout } from "antd";
-import "./App.scss"
+import "./App.sass";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 //pages
@@ -12,27 +12,25 @@ import Movie from "./pages/Movie";
 
 //components
 import MenuTop from "./components/MenuTop";
-import Footer from "./components/Footer"
-
-
+import Footer from "./components/Footer";
 
 function App() {
   const { Header, Content } = Layout;
   return (
     <BrowserRouter>
-    <Header style={{zIndex: '1'}}>
-      <MenuTop/>
+      <Header style={{ zIndex: "1" }}>
+        <MenuTop />
       </Header>
       <Content>
-      <Routes>
-        <Route path="/project-movies" element={<Home />} />
-        <Route path="/new-movies" element={<NewMovies />} />
-        <Route path="/popular" element={<Popular />} />
-        <Route path="/search" element={<Search />} />
-        <Route path="/movie/:id" element={<Movie />} />
-      </Routes>
+        <Routes className="main-container">
+          <Route path="/project-movies" element={<Home />} />
+          <Route path="/new-movies" element={<NewMovies />} />
+          <Route path="/popular" element={<Popular />} />
+          <Route path="/search" element={<Search />} />
+          <Route path="/movie/:id" element={<Movie />} />
+        </Routes>
       </Content>
-      <Footer style={{zIndex: '1'}}/>
+      <Footer style={{ zIndex: "1" }} />
     </BrowserRouter>
   );
 }
