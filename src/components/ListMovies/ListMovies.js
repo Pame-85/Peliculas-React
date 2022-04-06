@@ -3,7 +3,7 @@ import Loading from "../Loading";
 import { IMAGE_PATH } from "../../utils/constants";
 import { Link } from "react-router-dom";
 import { List, Avatar, Button } from "antd";
-import { PlayCircleOutlined } from '@ant-design/icons';
+import {RightOutlined} from '@ant-design/icons';
 
 const ListMovies = ({ title, moviesData }) => {
   if (moviesData.Loading || !moviesData.result) {
@@ -32,7 +32,7 @@ const RenderMovie = ({ movie: { id, title, poster_path: posterPath } }) => {
         title={<Link to={`/movie/${id}`}>{title}</Link>}
       />
       <Link to={`/movie/${id}`}>
-        <Button type="primary" shape="circle" icon={<PlayCircleOutlined />} />
+        <Button type="primary" shape="circle" icon={<RightOutlined />} />
       </Link>
     </List.Item>
   );

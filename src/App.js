@@ -23,12 +23,15 @@ function App() {
       </Header>
       <Content>
         <Routes className="main-container">
+          <Route path="/">
+          <Route index element={<Home/>}/>
           <Route path="/project-movies" element={<Home />} />
           <Route path="/new-movies" element={<NewMovies />} />
           <Route path="/popular" element={<Popular />} />
           <Route path="/search" element={<Search />} />
           <Route path="/movie/:id" element={<Movie />} />
-        </Routes>
+          </Route>
+          </Routes>
       </Content>
       <Footer style={{ zIndex: "1" }} />
     </BrowserRouter>
