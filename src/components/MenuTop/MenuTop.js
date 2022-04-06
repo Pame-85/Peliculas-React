@@ -17,7 +17,7 @@ const MenuTop = () => {
           <Link to="/project-movies">Home</Link>
         </Menu.Item>
         <Menu.Item key="2">
-          <Link to="/new-movies">Ultimos lanzamientos</Link>
+          <Link to="/new-movies">Últimos lanzamientos</Link>
         </Menu.Item>
         <Menu.Item key="3">
           <Link to="/popular">Populares</Link>

@@ -18,13 +18,13 @@ const Home = () => {
       <Row>
         <Col xs={24} sm={24} md={12}>
           <ListMovies
-            title="Peliculas Populares"
+            title="Películas Populares"
             moviesData={popularMoviesData}
           />
         </Col>
         <Col xs={24} sm={24} md={12}>
           <ListMovies
-            title="Peliculas Mejor Puntadas"
+            title="Películas Mejor Puntuadas"
             moviesData={recommendedMoviesData}
           />
         </Col>
