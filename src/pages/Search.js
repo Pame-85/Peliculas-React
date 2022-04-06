@@ -25,7 +25,7 @@ const Search = () => {
         <Title level={2} className="__title">Busca una película</Title>
         <Input
           prefix={<SearchOutlined />}
-          placeholder="Ingresá el nombre"
+          placeholder="Introduce el nombre"
           onChange={handlerOnChange}
           className="input-search"
           size="large"

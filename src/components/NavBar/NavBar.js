@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Menu } from "antd";
 import logo from "../../assets/popcorn.png";
-import "./_MenuTop.sass";
+import "./_NavBar.sass";
 
 
-const MenuTop = () => {
+const NavBar = () => {
   return (
     <div className="menu-top">
       <div className="menu-top__logo">
@@ -30,4 +30,4 @@ const MenuTop = () => {
   );
 };
 
-export default MenuTop;
+export default NavBar;

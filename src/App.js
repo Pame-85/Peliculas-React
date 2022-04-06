@@ -11,7 +11,7 @@ import Search from "./pages/Search";
 import Movie from "./pages/Movie";
 
 //components
-import MenuTop from "./components/MenuTop";
+import MenuTop from "./components/NavBar";
 import Footer from "./components/Footer";
 
 function App() {

@@ -29,10 +29,7 @@ const Home = () => {
           />
         </Col>
       </Row>
-
-      </div>
-
-  
+    </div>
   );
 };
 
