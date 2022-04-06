@@ -29,7 +29,7 @@ const Movie = () => {
       return <RenderMovie movieData={movieData} videoData={videoData} />;
     } else {
       return (
-        <h1 className="provisory-title">No encontramos datos de esa película</h1>
+        <h2 className="provisory-title">No encontramos datos de esa película</h2>
       );
     }
   };

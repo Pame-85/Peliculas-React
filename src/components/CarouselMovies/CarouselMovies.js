@@ -20,7 +20,7 @@ const CarouselMovies = ({moviesData}) => {
         
         }
       </Carousel>
-      ,
+      
     </div>
   );
 };
