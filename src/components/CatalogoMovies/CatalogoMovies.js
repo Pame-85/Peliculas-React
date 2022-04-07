@@ -62,7 +62,7 @@ const MovieCard = ({ movie: { id, title, poster_path } }) => (
       }
       actions={[<PlayCircleOutlined className="__icon" key="plus" />]}
     >
-      <Meta title={title} style={{ textAlign: "center"}} />
+      <Meta title={title} style={{ textAlign: "center" }} />
     </Card>
   </Link>
 );

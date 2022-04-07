@@ -9,7 +9,7 @@ import { Divider } from 'antd';
 
 
 const Footer = () => {
-  const { Footer } = Layout;
+const { Footer } = Layout;
 
   return (
 
