@@ -4,7 +4,6 @@ import { Menu } from "antd";
 import logo from "../../assets/popcorn.png";
 import "./_NavBar.sass";
 
-
 const NavBar = () => {
   return (
     <div className="menu-top">
