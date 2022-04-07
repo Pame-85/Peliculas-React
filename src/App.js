@@ -3,12 +3,14 @@ import { Layout } from "antd";
 import "./App.sass";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+
 //pages
 import Home from "./pages/Home";
 import NewMovies from "./pages/NewMovies";
 import Popular from "./pages/Popular";
 import Search from "./pages/Search";
 import Movie from "./pages/Movie";
+import Error404 from "./pages/Error";
 
 //components
 import MenuTop from "./components/NavBar";
@@ -30,6 +32,7 @@ function App() {
           <Route path="/popular" element={<Popular />} />
           <Route path="/search" element={<Search />} />
           <Route path="/movie/:id" element={<Movie />} />
+          <Route path="*" element={<Error404 />}/>
           </Route>
           </Routes>
       </Content>
