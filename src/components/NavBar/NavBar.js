@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Menu } from "antd";
-import logo from "../../assets/popcorn.png";
+import logo from "../../assets/cinema.png";
 import "./_NavBar.sass";
 
 const NavBar = () => {
