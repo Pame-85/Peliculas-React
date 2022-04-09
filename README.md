@@ -4,7 +4,7 @@
 
 ### Proyecto final del curso Frontend de Ada ITW.💻
 ***
-### Este proyecto tiene como objetivo principal mostrar el ejemplo de una aplicación "Meet Cinema",realizada con [React](https://es.reactjs.org/).
+### Este proyecto tiene como objetivo principal mostrar el ejemplo de una aplicación "Meet Cinema" realizada con [React](https://es.reactjs.org/).
 ***
 ### 🎥En el diseño  se utilizaron las siguientes tecnologías y recursos:
 - REACT
