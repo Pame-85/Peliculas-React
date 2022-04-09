@@ -96,7 +96,7 @@ const InfoMovie = ({
       <div>
         <h3 className="info__subTitle">General</h3>
         <p className="info__description">{overview}</p>
-        <h3 className="info__subTitle">Generos</h3>
+        <h3 className="info__subTitle">Géneros</h3>
         <ul className="info__genres">
           {genres.map((genre) => (
             <li key={genre.id}>{genre.name}</li>
