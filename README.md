@@ -11,7 +11,7 @@
 - HTML
 - CSS
 - SASS
-### Librerías utilizadas:
+### Librerías:
 - Antd
 - Antd Design Icon
 - Moment
