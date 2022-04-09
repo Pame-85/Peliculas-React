@@ -24,7 +24,7 @@
 ## Detalle de película
 - Podrás ver el detalle de la película seleccionada.
 (Título-Fecha de estreno-Descripción y Géneros)
--Vista de Trailer
+- Vista de Trailer
 ## Últimos lanzamientos y populares
 - Podrás acceder a todos las películas mediante
 la paginación.
