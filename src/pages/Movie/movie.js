@@ -55,7 +55,7 @@ const PosterMovie = ({ image }) => (
 );
 
 const InfoMovie = ({
-  result: { title, release_date, genres, overview },
+  result: { title, release_date, generos, overview },
   videoData: { key, site },
 }) => {
   const [isVisibleModal, setIsVisibleModal] = useState(false);
@@ -97,9 +97,9 @@ const InfoMovie = ({
         <h3 className="info__subTitle">General</h3>
         <p className="info__description">{overview}</p>
         <h3 className="info__subTitle">Géneros</h3>
-        <ul className="info__genres">
-          {genres.map((genre) => (
-            <li key={genre.id}>{genre.name}</li>
+        <ul className="info__generos">
+          {generos.map((genero) => (
+            <li key={genero.id}>{genero.name}</li>
           ))}
         </ul>
       </div>
