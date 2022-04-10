@@ -14,7 +14,7 @@ const Movie = () => {
   const urlData = `${URL_API}/movie/${id}${API_KEY}&language=es-ES`;
   const urlVideo = `${URL_API}/movie/${id}/videos${API_KEY}&language=en-EN`;
   const movieData = useFetch(urlData);
-
+  console.log(movieData)
   const movieVideo = useFetch(urlVideo);
 
   if (movieData.loading || !movieData.result || !movieVideo.result) {
@@ -29,7 +29,7 @@ const Movie = () => {
     return <RenderMovie movieData={movieData} videoData={videoData} />;
   } else {
     return (
-      <h2 className="provisory-title">No encontramos datos de esa película</h2>
+      <h1 className="provisory-title">No encontramos datos para está película</h1>
     );
   }
 };
@@ -39,14 +39,15 @@ const RenderMovie = ({ movieData: { result }, videoData }) => (
     className="movie"
     style={{ backgroundImage: `url('${IMAGE_PATH + result.backdrop_path}')` }}
   >
-    <Row className="movie__dark">
-      <Col xs={18} sm={18} md={8} offset={3} className="movie__poster">
-        <PosterMovie image={IMAGE_PATH + result.poster_path} />
-      </Col>
-      <Col xs={24} sm={12} md={10} className="movie__info">
-        <InfoMovie result={result} videoData={videoData} />
-      </Col>
-    </Row>
+
+      <Row className="movie__dark">
+        <Col xs={18} sm={18} md={8} offset={3} className="movie__poster">
+          <PosterMovie image={IMAGE_PATH + result.poster_path} />
+        </Col>
+        <Col xs={24} sm={12} md={10} className="movie__info">
+          <InfoMovie result={result} videoData={videoData} />
+        </Col>
+      </Row>
   </div>
 );
 
@@ -55,7 +56,7 @@ const PosterMovie = ({ image }) => (
 );
 
 const InfoMovie = ({
-  result: { title, release_date, generos, overview },
+  result: { title, release_date, genres, overview },
   videoData: { key, site },
 }) => {
   const [isVisibleModal, setIsVisibleModal] = useState(false);
@@ -89,17 +90,17 @@ const InfoMovie = ({
       <div>
         <h1 className="info__mainTitle">
           {title}
-          <span> - {moment(release_date, "YYYY-MM-DD").format("YYYY")}</span>
+          <span> ~ {moment(release_date, "YYYY-MM-DD").format("YYYY")}</span>
         </h1>
         {renderVideo()}
       </div>
       <div>
         <h3 className="info__subTitle">General</h3>
         <p className="info__description">{overview}</p>
-        <h3 className="info__subTitle">Géneros</h3>
-        <ul className="info__generos">
-          {generos.map((genero) => (
-            <li key={genero.id}>{genero.name}</li>
+        <h3 className="info__subTitle">Generos</h3>
+        <ul className="info__genres">
+          {genres.map((genre) => (
+            <li key={genre.id}>{genre.name}</li>
           ))}
         </ul>
       </div>
