@@ -41,7 +41,7 @@ activara el error 404.
 *****
 ### Para hacer correr este proyecto:
 
-- #### Ingresar comando ```npm start```.
+- Ingresar comando ```npm start```.
 
 ***
 #### Gracias a [Male Rey](https://github.com/malerey)💜por sus explicaciones de React. 
