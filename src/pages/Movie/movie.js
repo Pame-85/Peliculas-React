@@ -90,7 +90,7 @@ const InfoMovie = ({
       <div>
         <h1 className="info__mainTitle">
           {title}
-          <span> ~ {moment(release_date, "YYYY-MM-DD").format("YYYY")}</span>
+          <span> - {moment(release_date, "YYYY-MM-DD").format("YYYY")}</span>
         </h1>
         {renderVideo()}
       </div>
